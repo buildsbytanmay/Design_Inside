@@ -117,3 +117,109 @@ video{
         font-size: 16px;
     }
 }
+
+
+
+.frame2{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fffeed;
+    overflow: hidden;
+    display: flex;
+}
+
+.part1{
+    box-sizing: border-box;
+    height: 100%;
+    width: 50vw;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.aboutHead{
+    align-self: flex-start;
+    font-size: 16px;
+}
+
+.aboutInfo{
+    font-size: 35px;
+}
+
+.subAboutInfo{
+    font-size: 18px;
+}
+
+.thirdButt{
+    align-self: flex-start;
+}
+.part2{
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutImage{
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    background-image: url(Assets/Images/Luxurious_Home.jpg);
+    background-size: contain;
+}
+
+/* ================= FRAME 2 RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .frame2 {
+        height: auto;
+    }
+
+    .part1 {
+        padding: 100px 80px;
+    }
+
+    .aboutInfo {
+        font-size: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .frame2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .part1,
+    .part2 {
+        width: 100%;
+    }
+
+    .part1 {
+        padding: 50px 25px;
+        align-items: flex-start; /* keep original feel */
+    }
+
+    .aboutInfo {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .subAboutInfo {
+        font-size: 16px;
+    }
+
+    .aboutImage {
+        width: 90%;
+        height: 300px;
+        margin-bottom: 50px;
+        background-size: cover;
+        background-position: center;
+    }
+}
