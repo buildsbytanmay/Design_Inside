@@ -477,3 +477,121 @@ video{
         width: 220px;
     }
 }
+
+
+
+.frame5{
+    padding: 0px 50px;
+    padding-bottom: 50px;
+    background-color: #fffeed;
+}
+
+.services{
+    padding: 50px 0px 30px 0px;
+    font-weight: 600;
+}
+
+.serviceLine{
+    width: 500px;
+    font-weight: 100;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+.serviceCards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: nowrap;
+}
+
+.card{
+    color: #fffeed;
+    background-color: #584e26;
+    width: 30%;
+    padding: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 50px;
+
+}
+
+.serviceLogo{
+    height: 125px;
+    width: 95px;
+}
+
+.serviceName{
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.serviceInfo{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.fifthButt{
+    display: inline-block;
+}
+
+/* ================= FRAME 5 RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .serviceLine {
+        width: 100%;
+        font-size: 34px;
+    }
+
+    .serviceCards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 45%;
+        padding: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .frame5 {
+        padding: 0 25px 40px;
+    }
+
+    .serviceLine {
+        font-size: 26px;
+        padding-bottom: 30px;
+    }
+
+    .serviceCards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .serviceInfo {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .serviceLine {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+}
