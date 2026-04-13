@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "worksans-semibold", "work sans", "sans-serif"; */
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fffeed;
+}
+
+.frame2{
+    height: 100vh;
+    width: 99vw;
+    margin-top: 18px;
+    background-color: #fffeed;
+    overflow: hidden;
+    display: flex;
+}
+
+.part1{
+    box-sizing: border-box;
+    height: 100%;
+    width: 50vw;
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.aboutHead{
+    align-self: flex-start;
+    font-size: 16px;
+}
+
+.aboutInfo{
+    font-weight: 100;
+    font-size: 45px;
+    align-self: flex-start;
+}
+
+.subAboutInfo{
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.part2{
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutImage{
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    background-image: url(Assets/Images/About_us_image.jpg);
+    background-size: cover;
+}
