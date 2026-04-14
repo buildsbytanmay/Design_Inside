@@ -43,6 +43,11 @@
                         <input type="text" name="last_name" required>
                     </div>
                 </div>
+
+                <div class="field">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
             </form>
         </div>
     </div>
