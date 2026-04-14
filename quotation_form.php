@@ -25,5 +25,27 @@
         </div>
     </nav>
 
+    <div class="quote-wrapper">
+        <div class="quote-card">
+            <h1>Get a Quote</h1>
+            <p>Tell us about your project and we’ll get back to you</p>
+
+            <form action="quotation_form.php" method="POST">
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input type="text" name="first_name" required>
+                    </div>
+
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input type="text" name="last_name" required>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
