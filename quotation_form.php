@@ -83,6 +83,24 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Price Range</label>
+                        <select name="price_range">
+                            <option value="">Select budget</option>
+                            <option value="500000">Below ₹5 Lakhs</option>
+                            <option value="1000000">₹5–10 Lakhs</option>
+                            <option value="2000000">₹10–20 Lakhs</option>
+                            <option value="2500000">Above ₹20 Lakhs</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Start Date</label>
+                        <input type="date" name="start_date" min="<?= date('Y-m-d') ?>">
+                    </div>
+                </div>
             </form>
         </div>
     </div>
