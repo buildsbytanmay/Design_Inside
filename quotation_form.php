@@ -48,6 +48,18 @@
                     <label>Email</label>
                     <input type="email" name="email" required>
                 </div>
+
+                <div class="grid-2">
+                <div class="field">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone_num" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
+                </div>
+
+                <div class="field">
+                    <label>Alternate Phone</label>
+                   <input type="tel" name="phone_num2" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+                </div>
+            </div>
             </form>
         </div>
     </div>
