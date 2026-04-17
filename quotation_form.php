@@ -65,6 +65,24 @@
                     <label>Address</label>
                     <input type="text" name="address">
                 </div>
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label>Place</label>
+                        <input type="text" name="place">
+                    </div>
+
+                    <div class="field">
+                        <label>Service</label>
+                        <select name="service" required>
+                            <option value="">Select service</option>
+                            <option>Interior Design</option>
+                            <option>Renovation</option>
+                            <option>Modular Kitchen</option>
+                            <option>Full Home Design</option>
+                        </select>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
