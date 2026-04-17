@@ -101,6 +101,13 @@
                         <input type="date" name="start_date" min="<?= date('Y-m-d') ?>">
                     </div>
                 </div>
+
+                <div class="field">
+                    <label>Project Details</label>
+                    <textarea rows="4" name="message"></textarea>
+                </div>
+
+                <button class="quote-btn">Get a Quote</button>
             </form>
         </div>
     </div>
