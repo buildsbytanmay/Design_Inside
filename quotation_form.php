@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$conn = new mysqli("localhost", "root", "", "design_inside");
+if ($conn->connect_error) {
+    die("Database connection failed");
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
