@@ -160,5 +160,6 @@ if (isset($_SESSION['alert'])) {
         <div class="credit">©2025 by Design Inside. Developed by Tanmay Bhogekar & Kabir Bundele</div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
