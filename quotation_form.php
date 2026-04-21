@@ -5,6 +5,68 @@ $conn = new mysqli("localhost", "root", "", "design_inside");
 if ($conn->connect_error) {
     die("Database connection failed");
 }
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    
+    $first_name = trim($_POST['first_name']);
+    $last_name  = trim($_POST['last_name']);
+    $name       = $first_name . " " . $last_name;
+    $email   = trim($_POST['email']);
+    $phone1  = trim($_POST['phone_num']);
+    $phone2  = trim($_POST['phone_num2']);
+    $address = trim($_POST['address']);
+    $place   = trim($_POST['place']);
+    $service = trim($_POST['service']);
+    $price   = trim($_POST['price_range']);
+    $date    = trim($_POST['start_date']);
+    $msg     = trim($_POST['message']);
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $_SESSION['alert'] = "Invalid email address!";
+    }
+    elseif (!preg_match("/^[0-9]{10}$/", $phone1)) {
+    $_SESSION['alert'] = "Phone number must contain only digits and be exactly 10 digits long!";
+    }
+elseif (!empty($phone2) && !preg_match("/^[0-9]{10}$/", $phone2)) {
+    $_SESSION['alert'] = "Alternate phone number must contain only digits and be exactly 10 digits long!";
+    }
+    else {
+
+        $stmt = $conn->prepare(
+    "INSERT INTO Customer
+    (name, email, phone_num, phone_num2, address, price_range, start_date, place, service, message)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+);
+
+
+$stmt->bind_param(
+    "sssssdssss",
+    $name,
+    $email,
+    $phone1,
+    $phone2,
+    $address,
+    $price,
+    $date,  
+    $place,
+    $service,
+    $msg
+);
+
+
+        if ($stmt->execute()) {
+            $_SESSION['alert'] = "Quotation submitted successfully!";
+        } else {
+            $_SESSION['alert'] = "Something went wrong. Please try again!";
+        }
+
+        $stmt->close();
+    }
+
+    header("Location: quotation_form.php");
+    exit;
+}
 ?>
 
 
