@@ -24,4 +24,9 @@ $start_date  = $_POST['start_date'];
 $message     = trim($_POST['message']);
 
 
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    die("<h3>Invalid Email Format</h3>");
+}
+
+
 ?>
