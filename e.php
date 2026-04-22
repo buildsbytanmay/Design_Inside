@@ -28,5 +28,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     die("<h3>Invalid Email Format</h3>");
 }
 
+if (!preg_match('/^[0-9]{10}$/', $phone_num)) {
+    die("<h3>Phone number must be exactly 10 digits</h3>");
+}
+
 
 ?>
