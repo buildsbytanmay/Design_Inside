@@ -64,4 +64,15 @@ $stmt->bind_param(
     $message
 );
 
+if ($stmt->execute()) {
+    echo "<h2>Quotation Submitted Successfully</h2>";
+    echo "<p>Our team will contact you soon.</p>";
+} else {
+    echo "<h3>Error submitting quotation</h3>";
+}
+
+
+$stmt->close();
+$conn->close();
+
 ?>
