@@ -32,6 +32,10 @@ if (!preg_match('/^[0-9]{10}$/', $phone_num)) {
     die("<h3>Phone number must be exactly 10 digits</h3>");
 }
 
+if (!empty($phone_num2) && !preg_match('/^[0-9]{10}$/', $phone_num2)) {
+    die("<h3>Alternate phone must be 10 digits</h3>");
+}
+
 /* ---------- CHECK DUPLICATE EMAIL ---------- */
 $check = $conn->prepare("SELECT email FROM Customer WHERE email = ?");
 $check->bind_param("s", $email);
