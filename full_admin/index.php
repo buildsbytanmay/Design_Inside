@@ -36,5 +36,24 @@
         </div>
     </div>
 
+    <!-- FRONT PANEL -->
+    <div class="page front">
+        <div class="content">
+            <h1>Hello, Admin</h1>
+            <p>Log in to continue</p>
+
+            <!-- MUST be id="register" -->
+            <button type="button" id="register">
+                Forgot Password
+            </button>
+
+            <br>
+
+            <button type="button" onclick="window.location.href='http://localhost/Design_Inside/'">
+                HOME
+            </button>
+        </div>
+    </div>
+
 </body>
 </html>
