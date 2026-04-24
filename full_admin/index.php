@@ -53,6 +53,26 @@
                 HOME
             </button>
         </div>
+
+        <!-- BACK PANEL -->
+        <div class="page back">
+            <div class="content">
+                <h1>Welcome Back!</h1>
+                <p>Return to login</p>
+
+                <!-- MUST be id="login" -->
+                <button type="button" id="login">
+                    Log In
+                </button>
+
+                <br>
+
+                <button type="button" onclick="window.location.href='http://localhost/Design_Inside/'">
+                    HOME
+                </button>
+            </div>
+        </div>
+
     </div>
 
 </body>
