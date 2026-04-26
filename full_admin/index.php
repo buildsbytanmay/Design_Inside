@@ -73,6 +73,31 @@
             </div>
         </div>
 
+        <!-- FORGOT PASSWORD FORM -->
+        <div class="register">
+            <div class="content">
+                <h1>Forgot Password</h1>
+
+                <form method="POST" action="login.php">
+                    <input type="hidden" name="forgot" value="1">
+
+                    <input type="text" name="user_input" placeholder="Username / Email" required>
+
+                    <select id="select" name="security_question" required>
+                        <option value="" disabled selected>Select Security Question</option>
+                        <option value="Your favorite color?">Your favorite color?</option>
+                        <option value="Your first pet name?">Your first pet name?</option>
+                        <option value="Your birth city?">Your birth city?</option>
+                    </select>
+
+                    <input type="text" name="security_answer" placeholder="Answer" required>
+                    <input type="password" name="new_password" placeholder="New Password" required>
+
+                    <button type="submit">Reset Password</button>
+                </form>
+            </div>
+        </div>
+
     </div>
 
 </body>
