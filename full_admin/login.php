@@ -28,4 +28,35 @@ if(isset($_POST['login'])){
     }
 }
 
+
+// FORGOT PASSWORD
+if(isset($_POST['forgot'])){
+    $user_input = trim($_POST['user_input']);
+    $security_question = trim($_POST['security_question']);
+    $security_answer = trim($_POST['security_answer']);
+    $new_password = trim($_POST['new_password']);
+
+    $stmt = $conn->prepare("SELECT * FROM Admins WHERE email=? OR username=?");
+    $stmt->bind_param("ss", $user_input, $user_input);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $user = $result->fetch_assoc();
+
+    if(!$user){
+        echo "<script>alert('❌ User not found'); window.history.back();</script>";
+        exit;
+    }
+
+    if($user['security_question'] != $security_question || strtolower(trim($user['security_answer'])) != strtolower($security_answer)){
+        echo "<script>alert('❌ Security question/answer mismatch'); window.history.back();</script>";
+        exit;
+    }
+
+    $stmt = $conn->prepare("UPDATE Admins SET password=? WHERE email=?");
+    $stmt->bind_param("ss", $new_password, $user['email']);
+    $stmt->execute();
+
+    echo "<script>alert('✅ Password updated. Login now'); window.location.href='index.php';</script>";
+}
+
 ?>
