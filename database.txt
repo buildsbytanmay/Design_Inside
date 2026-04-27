@@ -43,3 +43,21 @@ VALUES
 ('Manish Kumar', 'manish10@example.com', '9123009876', '9123009875', '45, MG Marg, Jaipur, Rajasthan', 650000, '2026-04-10', 'Jaipur', 'Full Renovation', 'Client wants vibrant colors.', 'selected'),
 ('Riya Patel', 'riya11@example.com', '9988774433', '9988774455', '56, SG Highway, Ahmedabad, Gujarat', 480000, '2026-03-05', 'Ahmedabad', 'Home Office', 'Needs functional layout.', 'not selected'),
 ('Kabir Khan', 'kabir12@example.com', '9876654321', '9876654332', '12, Brigade Road, Bangalore, Karnataka', 520000, '2026-04-20', 'Bangalore', 'Living & Dining', 'Client prefers bright theme.', 'selected');
+
+##completed table
+CREATE TABLE Compro (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone_num VARCHAR(10) NOT NULL UNIQUE,
+    phone_num2 VARCHAR(10),
+    address TEXT NOT NULL,
+    Profit_price DECIMAL(12,2),
+    start_date DATE,
+    ending_date DATE,
+    place VARCHAR(200),
+    service VARCHAR(255) NOT NULL,
+    message TEXT,
+    comp_pro_price DECIMAL(12,2),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (email)
+);
