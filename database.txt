@@ -9,3 +9,20 @@ INSERT INTO Admins (username, email, password, security_question, security_answe
 ('admin1', 'admin1@example.com', 'password123', 'Your favorite color?', 'Blue'),
 ('admin2', 'admin2@example.com', 'password456', 'Your first pet name?', 'Tommy'),
 ('admin3', 'admin3@example.com', 'password789', 'Your birth city?', 'Mumbai');
+
+##customer table
+CREATE TABLE Customer (
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    phone_num VARCHAR(10) NOT NULL,
+    phone_num2 VARCHAR(10),
+    address TEXT,
+    price_range BIGINT,
+    start_date DATE,
+    place VARCHAR(200),
+    service VARCHAR(255) NOT NULL,
+    message TEXT,
+    status_c VARCHAR(50) DEFAULT 'not selected',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(email)
+);
