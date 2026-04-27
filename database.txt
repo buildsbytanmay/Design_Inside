@@ -61,3 +61,10 @@ CREATE TABLE Compro (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (email)
 );
+
+#completed table insert value
+INSERT INTO Compro (name, email, phone_num, phone_num2, address, Profit_price, start_date, ending_date, place, service, message, comp_pro_price) VALUES
+('John Doe', 'john@example.com', 9876543210, 9123456780, '123 Street, New York', 15000.00, '2025-11-25', '2025-12-05', 'New York', 'Interior Design', 'Completed modern design project.', 50000.00),
+('Jane Smith', 'jane@example.com', 8765432109, NULL, '456 Avenue, Los Angeles', 20000.00, '2025-12-01', '2025-12-15', 'Los Angeles', 'Renovation', 'Full home renovation completed.', 75000.00),
+('Alex Johnson', 'alex@example.com', 7654321098, 7987654321, '789 Boulevard, Chicago', 10000.00, '2025-12-05', '2025-12-12', 'Chicago', 'Office Design', 'Small office setup completed.', 30000.00);
+
