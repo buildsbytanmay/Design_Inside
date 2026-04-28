@@ -26,3 +26,12 @@ nav{
     background-position-x: center;
     background-position-y: 45%;
 }
+
+.menus{
+    color: rgba(255, 255, 255, 0.7);
+    height: 80px;
+    width: 615px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
