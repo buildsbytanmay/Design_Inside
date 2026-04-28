@@ -35,3 +35,16 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+
+.submenus{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.submenus:visited{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.underline:hover{
+    text-decoration: underline;
+}
