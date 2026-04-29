@@ -70,3 +70,16 @@ nav{
     font-weight: 600;
     border-radius: 10px;
 }
+
+.butt:hover{
+    transition: all 1s ease;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.butt:hover svg{
+    padding-bottom: 0px;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
