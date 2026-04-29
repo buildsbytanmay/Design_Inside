@@ -83,3 +83,11 @@ nav{
     transform: rotate(360deg);
     transition: transform 0.5s ease;
 }
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
