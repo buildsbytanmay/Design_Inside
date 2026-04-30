@@ -71,3 +71,34 @@ span.clearfix {
   clear: both;
   display: table;
 }
+
+
+button {
+  display: block;
+  margin: 1em auto;
+  border-radius: 40px;
+  border: 1px solid #004d4d;
+  background: #004d4d;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.8em 2em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+button svg {
+  vertical-align: middle;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
