@@ -123,3 +123,12 @@ button:focus {
   align-items: center;
   justify-content: center;
 }
+
+.content {
+  width: 100%;
+  padding: 2em 4em;
+  text-align: center;
+}
+.content p {
+  font-size: 1.4em;
+}
