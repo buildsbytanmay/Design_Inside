@@ -47,3 +47,27 @@ h1 {
     background-color: #eeeeee;
     padding-left: 8px;
 }
+
+form input {
+  background: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  font-size: 1.4em;
+}
+
+span {
+  color: #333;
+  font-size: 1.4em;
+  display: inline-block;
+  margin: 15px auto;
+  font-weight: 100;
+}
+
+
+
+span.clearfix {
+  clear: both;
+  display: table;
+}
