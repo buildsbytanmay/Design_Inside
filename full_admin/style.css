@@ -132,3 +132,17 @@ button:focus {
 .content p {
   font-size: 1.4em;
 }
+
+.login {
+  left: 0;
+  background: #FAFAFA;
+  border-radius: 20px 0 0 20px;
+}
+.login button {
+  border-radius: 0px;
+  width: 100%;
+}
+.login svg {
+  margin: 1em;
+  stroke: #999;
+}
