@@ -191,3 +191,23 @@ button:focus {
 .back .content {
   transform: rotateY(180deg);
 }
+
+.active .front {
+  -webkit-animation: rot-front 0.6s ease-in-out normal forwards;
+          animation: rot-front 0.6s ease-in-out normal forwards;
+}
+
+.active .back {
+  -webkit-animation: rot-back 0.6s ease-in-out normal forwards;
+          animation: rot-back 0.6s ease-in-out normal forwards;
+}
+
+.close .front {
+  -webkit-animation: close-rot-front 0.6s ease-in-out normal forwards;
+          animation: close-rot-front 0.6s ease-in-out normal forwards;
+}
+
+.close .back {
+  -webkit-animation: close-rot-back 0.6s ease-in-out normal forwards;
+          animation: close-rot-back 0.6s ease-in-out normal forwards;
+}
