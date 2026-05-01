@@ -178,3 +178,16 @@ button:focus {
 .page p {
   margin: 2em auto;
 }
+
+.front {
+  background: linear-gradient(-45deg, #004d4d 0%, #008080 100%) no-repeat 0 0/200%;
+  z-index: 3;
+}
+
+.back {
+  background: linear-gradient(135deg, #008080 0%, #004d4d 100%) no-repeat 0 0/200%;
+  z-index: 2;
+}
+.back .content {
+  transform: rotateY(180deg);
+}
