@@ -146,3 +146,18 @@ button:focus {
   margin: 1em;
   stroke: #999;
 }
+
+.register {
+  right: 0;
+  z-index: 1;
+  border-radius: 0 20px 20px 0;
+  background: #FAFAFA;
+}
+.register button {
+  border-radius: 0px;
+  width: 100%;
+}
+.register svg {
+  margin: 1em;
+  stroke: #999;
+}
