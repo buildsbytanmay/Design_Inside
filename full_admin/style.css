@@ -161,3 +161,20 @@ button:focus {
   margin: 1em;
   stroke: #999;
 }
+
+.page {
+  right: 0;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  transform-origin: left center;
+  transition: -webkit-animation 1s linear;
+  transition: animation 1s linear;
+  transition: animation 1s linear, -webkit-animation 1s linear;
+}
+.page button {
+  border-color: #fff;
+  background: transparent;
+}
+.page p {
+  margin: 2em auto;
+}
