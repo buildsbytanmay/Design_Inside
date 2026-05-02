@@ -211,3 +211,29 @@ button:focus {
   -webkit-animation: close-rot-back 0.6s ease-in-out normal forwards;
           animation: close-rot-back 0.6s ease-in-out normal forwards;
 }
+
+@-webkit-keyframes rot-front {
+  from {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+}
+
+@keyframes rot-front {
+  from {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+}
+@-webkit-keyframes close-rot-front {
+  from {
+    transform: translateZ(1px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+}
