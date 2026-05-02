@@ -279,3 +279,23 @@ button:focus {
     transform: translateZ(1px) rotateY(0deg);
   }
 }
+
+.active .register .content {
+  -webkit-animation: show 0.7s ease-in-out normal forwards;
+          animation: show 0.7s ease-in-out normal forwards;
+}
+
+.close .register .content {
+  -webkit-animation: hide 0.7s ease-in-out normal forwards;
+          animation: hide 0.7s ease-in-out normal forwards;
+}
+
+.active .login .content {
+  -webkit-animation: hide 0.7s ease-in-out normal forwards;
+          animation: hide 0.7s ease-in-out normal forwards;
+}
+
+.close .login .content {
+  -webkit-animation: show 0.7s ease-in-out normal forwards;
+          animation: show 0.7s ease-in-out normal forwards;
+}
