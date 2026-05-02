@@ -262,3 +262,20 @@ button:focus {
     transform: translateZ(2px) rotateY(-180deg);
   }
 }
+
+@-webkit-keyframes close-rot-back {
+  from {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+}
+@keyframes close-rot-back {
+  from {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+  to {
+    transform: translateZ(1px) rotateY(0deg);
+  }
+}
