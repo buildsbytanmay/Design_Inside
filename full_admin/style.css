@@ -322,3 +322,24 @@ button:focus {
     transform: scale(0.99);
   }
 }
+
+@-webkit-keyframes hide {
+  from {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 0.99;
+    transform: scale(0.99);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
