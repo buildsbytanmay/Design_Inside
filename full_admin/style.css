@@ -343,3 +343,25 @@ button:focus {
     transform: scale(0.8);
   }
 }
+
+/* forgot form */
+/* Style the select element */
+#forgotForm select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    appearance: none; /* Remove default arrow in most browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    transition: 0.3s;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" stroke="%23004d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 18px 18px;
+}
