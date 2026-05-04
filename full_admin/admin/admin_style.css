@@ -4,3 +4,24 @@ body {
     margin: 0;
     background-color: #f4f4f4;
 }
+
+.navbar {
+    background-color: #004d4d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar .menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
