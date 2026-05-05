@@ -54,3 +54,26 @@ table th {
     background-color: #004d4d;
     color: white;
 }
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button.approve {
+    background-color: #28a745;
+    color: white;
+}
+
+button.reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.delete {
+    background-color: #6c757d;
+    color: white;
+}
