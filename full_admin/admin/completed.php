@@ -52,3 +52,27 @@ body{
         <a class="submenus underline" href="logout.php">LOGOUT</a>
     </div>
 </nav>
+
+
+<h2 style="margin:20px"><?= $edit_data ? "Update Project" : "Add New Project" ?></h2>
+
+<form class="filter-form" method="post">
+    <input type="hidden" name="action" value="<?= $edit_data ? 'update' : 'add' ?>">
+    <?php if($edit_data): ?>
+        <input type="hidden" name="old_email" value="<?= $edit_data['email'] ?>">
+    <?php endif; ?>
+
+    <input type="text" name="name" placeholder="Name" value="<?= $edit_data['name'] ?? '' ?>" required>
+    <input type="email" name="email" placeholder="example@domain.com" value="<?= $edit_data['email'] ?? '' ?>" required>
+    <input type="tel" name="phone_num" placeholder="10-digit phone" pattern="[6-9][0-9]{9}" maxlength="10" value="<?= $edit_data['phone_num'] ?? '' ?>" required>
+    <input type="tel" name="phone_num2" placeholder="10-digit phone (optional)" pattern="[6-9][0-9]{9}" maxlength="10" value="<?= $edit_data['phone_num2'] ?? '' ?>">
+    <input type="text" name="address" placeholder="Address" value="<?= $edit_data['address'] ?? '' ?>" required>
+    <input type="number" name="Profit_price" placeholder="Profit Price" value="<?= $edit_data['Profit_price'] ?? '' ?>" required>
+    <input type="date" name="start_date" value="<?= $edit_data['start_date'] ?? '' ?>" required>
+    <input type="date" name="ending_date" value="<?= $edit_data['ending_date'] ?? '' ?>" required>
+    <input type="text" name="place" placeholder="Place" value="<?= $edit_data['place'] ?? '' ?>" required>
+    <input type="text" name="service" placeholder="Service" value="<?= $edit_data['service'] ?? '' ?>" required>
+    <textarea name="message" placeholder="Message"><?= $edit_data['message'] ?? '' ?></textarea>
+    <input type="number" name="comp_pro_price" placeholder="Completed Project Price" value="<?= $edit_data['comp_pro_price'] ?? '' ?>" required>
+    <button type="submit"><?= $edit_data ? "Update Project" : "Add Project" ?></button>
+</form>
