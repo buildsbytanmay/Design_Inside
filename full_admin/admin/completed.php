@@ -76,3 +76,13 @@ body{
     <input type="number" name="comp_pro_price" placeholder="Completed Project Price" value="<?= $edit_data['comp_pro_price'] ?? '' ?>" required>
     <button type="submit"><?= $edit_data ? "Update Project" : "Add Project" ?></button>
 </form>
+
+<h2 style="margin:20px">Completed Projects</h2>
+
+<form class="filter-form" method="get">
+    <input type="text" name="name" placeholder="Name" value="<?= $_GET['name'] ?? '' ?>">
+    <input type="text" name="email" placeholder="Email" value="<?= $_GET['email'] ?? '' ?>">
+    <input type="text" name="service" placeholder="Service" value="<?= $_GET['service'] ?? '' ?>">
+    <input type="text" name="place" placeholder="Place" value="<?= $_GET['place'] ?? '' ?>">
+    <button type="submit">Filter</button>
+</form>
