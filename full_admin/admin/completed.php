@@ -47,6 +47,65 @@ nav a{
 nav a:hover{
     color:#ffd700
 }
+
+/* ================= NAVBAR RESPONSIVE ================= */
+
+.logo{
+    height: 80px;
+    width: 150px;
+    background-image: url(Assets/Images/Logo.png);
+    background-size: 115%;
+    background-position-x: center;
+    background-position-y: 45%;
+}
+
+.hamburger{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Desktop */
+.menus{
+    display:flex;
+    align-items:center;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+    nav{
+        padding:0 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    .hamburger{
+        display:block;
+    }
+
+    .menus{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#004d4d;
+        flex-direction:column;
+        align-items:center;
+        display:none;
+        padding:20px 0;
+        z-index:999;
+    }
+
+    .menus a{
+        margin:12px 0;
+        font-size:18px;
+    }
+
+    .menus.active{
+        display:flex;
+    }
+}
 </style>
 </head>
 
