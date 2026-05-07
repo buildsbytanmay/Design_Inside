@@ -23,6 +23,30 @@ if (!isset($_SESSION['admin'])) {
 body{
     background:#f5f5f5;
 }
+
+nav{
+    /* background:#004d4d; */
+    background:#69a3a3;
+    height: 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    color:#fff;
+}
+nav .logo{
+    font-size:24px;
+    font-weight:700
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+    font-weight:600
+}
+nav a:hover{
+    color:#ffd700
+}
 </style>
 </head>
 
