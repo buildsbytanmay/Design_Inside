@@ -86,3 +86,35 @@ body{
     <input type="text" name="place" placeholder="Place" value="<?= $_GET['place'] ?? '' ?>">
     <button type="submit">Filter</button>
 </form>
+
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Name</th><th>Email</th><th>Phone</th><th>Phone 2</th><th>Address</th><th>Profit Price</th><th>Start Date</th><th>Ending Date</th><th>Place</th><th>Service</th><th>Message</th><th>Completed Price</th><th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<?php while($row = $result->fetch_assoc()): ?>
+<tr>
+<td><?= $row['name'] ?></td>
+<td><?= $row['email'] ?></td>
+<td><?= $row['phone_num'] ?></td>
+<td><?= $row['phone_num2'] ?></td>
+<td><?= $row['address'] ?></td>
+<td><?= $row['Profit_price'] ?></td>
+<td><?= $row['start_date'] ?></td>
+<td><?= $row['ending_date'] ?></td>
+<td><?= $row['place'] ?></td>
+<td><?= $row['service'] ?></td>
+<td><?= $row['message'] ?></td>
+<td><?= $row['comp_pro_price'] ?></td>
+<td>
+    <a href="?edit=1&email=<?= $row['email'] ?>"><button class="approve">Edit</button></a>
+    <a href="?delete=1&email=<?= $row['email'] ?>" onclick="return confirm('Delete?')"><button class="reject">Delete</button></a>
+</td>
+</tr>
+<?php endwhile; ?>
+</tbody>
+</table>
+</div>
