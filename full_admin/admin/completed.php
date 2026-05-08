@@ -129,6 +129,48 @@ nav a:hover{
 .filter-form button:hover{
     background:#006666;
 }
+
+.table-container{
+    width:95%;
+    margin:20px auto;
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    overflow:auto;
+}
+table{
+    /* width:100%; */
+    border-collapse:collapse;
+    table-layout:fixed;
+}
+th,td{
+    padding:8px;
+    border:1px solid #ddd;
+    font-size:13px;
+    word-wrap:break-word;
+}
+th{
+    background:#004d4d;
+    color:#fff;
+}
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+.approve{
+    background:#28a745;
+    color:#fff;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+}
+.reject{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px;
+}
 </style>
 </head>
 
