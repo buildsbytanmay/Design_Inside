@@ -60,5 +60,26 @@
     <button type="submit"><?= $edit_data ? "Update Customer" : "Add Customer" ?></button>
 </form>
 
+<h2 style="margin:20px">Customer List</h2>
+
+<form class="filter-form" method="get">
+    <input type="text" name="name" placeholder="Name" value="<?= $_GET['name'] ?? '' ?>">
+    <input type="text" name="email" placeholder="Email" value="<?= $_GET['email'] ?? '' ?>">
+    <input type="text" name="service" placeholder="Service" value="<?= $_GET['service'] ?? '' ?>">
+    <input type="text" name="place" placeholder="Place" value="<?= $_GET['place'] ?? '' ?>">
+    <select name="status_c">
+        <option value="">All Status</option>
+        <option value="not selected" <?= ($_GET['status_c'] ?? '')=='not selected'?'selected':'' ?>>Not Selected</option>
+        <option value="selected" <?= ($_GET['status_c'] ?? '')=='selected'?'selected':'' ?>>Selected</option>
+    </select>
+    <select name="price_range">
+        <option value="">All Price</option>
+        <option value="100000" <?= ($_GET['price_range'] ?? '')=='100000'?'selected':'' ?>>Under 100000</option>
+        <option value="500000" <?= ($_GET['price_range'] ?? '')=='500000'?'selected':'' ?>>Under 500000</option>
+        <option value="500001" <?= ($_GET['price_range'] ?? '')=='500001'?'selected':'' ?>>More than 500000</option>
+    </select>
+    <button type="submit">Filter</button>
+</form>
+
 </body>
 </html>
