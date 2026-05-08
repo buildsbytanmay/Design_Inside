@@ -106,6 +106,29 @@ nav a:hover{
         display:flex;
     }
 }
+
+.filter-form{
+    margin:20px auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    width:95%;
+}
+.filter-form input, .filter-form select, .filter-form textarea, .filter-form button{
+    padding:8px 10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:14px;
+}
+.filter-form button{
+    background:#004d4d;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+.filter-form button:hover{
+    background:#006666;
+}
 </style>
 </head>
 
