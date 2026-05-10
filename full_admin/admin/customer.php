@@ -81,5 +81,38 @@
     <button type="submit">Filter</button>
 </form>
 
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Name</th><th>Email</th><th>Phone</th><th>Phone 2</th><th>Address</th><th>Price</th><th>Service</th><th>Start Date</th><th>Place</th><th>Message</th><th>Status</th><th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<?php while($row=$result->fetch_assoc()): ?>
+<tr>
+<td data-label="Name"><?= $row['name'] ?></td>
+<td data-label="Email"><?= $row['email'] ?></td>
+<td data-label="Phone"><?= $row['phone_num'] ?></td>
+<td data-label="Phone2"><?= $row['phone_num2'] ?></td>
+<td data-label="Address"><?= $row['address'] ?></td>
+<td data-label="Price"><?= $row['price_range'] ?></td>
+<td data-label="Service"><?= $row['service'] ?></td>
+<td data-label="Start Date"><?= $row['start_date'] ?></td>
+<td data-label="Place"><?= $row['place'] ?></td>
+<td data-label="Message"><?= $row['message'] ?></td>
+<td data-label="Status"><?= $row['status_c'] ?></td>
+<td data-label="Actions">
+    <a href="?edit=1&email=<?= $row['email'] ?>"><button class="approve">Edit</button></a>
+    <a href="?completed=1&email=<?= $row['email'] ?>"><button class="completed">Completed</button></a>
+    <a href="?delete=1&email=<?= $row['email'] ?>" onclick="return confirm('Delete?')"><button class="reject">Delete</button></a>
+</td>
+</tr>
+<?php endwhile; ?>
+</tbody>
+</table>
+</div>
+
+
 </body>
 </html>
