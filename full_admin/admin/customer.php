@@ -113,6 +113,11 @@
 </table>
 </div>
 
+<script>
+    function toggleMenu(){
+        document.querySelector('.menus').classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
