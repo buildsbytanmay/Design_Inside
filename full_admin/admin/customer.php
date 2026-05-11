@@ -131,6 +131,24 @@ nav a:hover{
     overflow-x:auto
 }
 
+table{
+    width:100%;
+    border-collapse:collapse
+}
+th,td{
+    padding:8px;
+    border:1px solid #ddd;
+    font-size:13px
+}
+th{
+    background:#004d4d;
+    color:#fff
+}
+tr:nth-child(even){
+    background:#f9f9f9
+}
+
+
 </style>
 </head>
 <body>
