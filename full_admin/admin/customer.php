@@ -172,6 +172,29 @@ tr:nth-child(even){
     border-radius:5px
 }
 
+@media(max-width:768px){
+    table,thead,tbody,tr,td,th{
+        display:block
+        }
+    thead{
+        display:none
+    }
+    tr{
+        margin-bottom:10px
+    }
+    td{
+        padding-left:45%;
+        position:relative;
+    }
+    td::before{
+        content:attr(data-label);
+        position:absolute;
+        left:10px;
+        font-weight:600;
+        color:#004d4d
+    }
+}
+
 </style>
 </head>
 <body>
