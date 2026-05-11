@@ -148,6 +148,13 @@ tr:nth-child(even){
     background:#f9f9f9
 }
 
+.approve{
+    background:#28a745;
+    color:#fff;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px
+}
 
 </style>
 </head>
