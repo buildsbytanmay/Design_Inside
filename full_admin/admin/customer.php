@@ -99,6 +99,38 @@ nav a:hover{
     }
 }
 
+.filter-form{
+    margin:20px auto;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    width:95%
+}
+.filter-form input, .filter-form select, .filter-form textarea, .filter-form button{
+    padding:8px 10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:14px
+}
+.filter-form button{
+    background:#004d4d;
+    color:#fff;
+    border:none;
+    cursor:pointer
+}
+.filter-form button:hover{
+    background:#006666
+}
+.table-container{
+    width:95%;
+    margin:20px auto;
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    overflow-x:auto
+}
+
 </style>
 </head>
 <body>
