@@ -156,6 +156,14 @@ tr:nth-child(even){
     border-radius:5px
 }
 
+.reject{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:6px 10px;
+    border-radius:5px
+}
+
 </style>
 </head>
 <body>
