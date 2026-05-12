@@ -62,5 +62,41 @@
         <button type="submit">Filter</button>
     </form>
 
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th><th>Email</th><th>Phone</th><th>Address</th>
+                    <th>Price</th><th>Service</th><th>Message</th>
+                    <th>Status</th><th>Date</th><th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while($row=$result->fetch_assoc()): ?>
+                <tr>
+                    <td><?= htmlspecialchars($row['name']) ?></td>
+                    <td><?= htmlspecialchars($row['email']) ?></td>
+                    <td><?= htmlspecialchars($row['phone_num']) ?></td>
+                    <td><?= htmlspecialchars($row['address']) ?></td>
+                    <td><?= htmlspecialchars($row['price_range']) ?></td>
+                    <td><?= htmlspecialchars($row['service']) ?></td>
+                    <td><?= htmlspecialchars($row['message']) ?></td>
+                    <td><?= htmlspecialchars($row['status_c']) ?></td>
+                    <td><?= htmlspecialchars($row['created_at']) ?></td>
+                    <td>
+                        <?php if($row['status_c']=='not selected'): ?>
+                        <a href="?action=approve&email=<?= $row['email'] ?>"><button class="approve">Approve</button></a>
+                        <a href="?action=reject&email=<?= $row['email'] ?>" onclick="return confirm('Delete this record?')">
+                        <button class="reject">Reject</button></a>
+                        <?php else: ?>
+                        Approved
+                        <?php endif; ?>
+                    </td>
+                </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+    </div>
+
 </body>
 </html>
