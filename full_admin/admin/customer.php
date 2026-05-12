@@ -144,6 +144,11 @@ foreach($filter_fields as $f){
     }
 }
 
+$filter_sql .= " ORDER BY created_at DESC";
+$stmt = $conn->prepare($filter_sql);
+if($params) $stmt->bind_param($types, ...$params);
+$stmt->execute();
+$result = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
