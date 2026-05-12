@@ -58,6 +58,29 @@ if (isset($_GET['completed'], $_GET['email'])) {
     exit;
 }
 
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $name        = $_POST['name'];
+    $email       = $_POST['email'];
+    $phone_num   = $_POST['phone_num'];
+    $phone_num2  = $_POST['phone_num2'] ?? '';
+    $address     = $_POST['address'];
+    $price_range = $_POST['price_range'];
+    $start_date  = $_POST['start_date'];
+    $place       = $_POST['place'];
+    $service     = $_POST['service'];
+    $message     = $_POST['message'];
+    $status_c    = $_POST['status_c'];
+
+    /* ---------- VALIDATION ---------- */
+    if (!preg_match('/^[6-9][0-9]{9}$/', $phone_num)) {
+        echo "<script>alert('Phone number must be 10 digits and start with 6-9');history.back();</script>";
+        exit;
+    }
+
+    
+}
+
+
 ?>
 
 <!DOCTYPE html>
