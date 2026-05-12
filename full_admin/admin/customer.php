@@ -18,6 +18,46 @@ if (isset($_GET['delete'], $_GET['email'])) {
     exit;
 }
 
+/* ---------- COMPLETED BUTTON ---------- */
+if (isset($_GET['completed'], $_GET['email'])) {
+    // Fetch customer details
+    $stmt = $conn->prepare("SELECT * FROM Customer WHERE email=?");
+    $stmt->bind_param("s", $_GET['email']);
+    $stmt->execute();
+    $customer = $stmt->get_result()->fetch_assoc();
+
+    if ($customer) {
+        // Insert into completed table (Compro) with default extra fields (Profit_price, comp_pro_price)
+        $stmt = $conn->prepare("
+            INSERT INTO Compro 
+            (name,email,phone_num,phone_num2,address,Profit_price,start_date,ending_date,place,service,message,comp_pro_price)
+            VALUES (?,?,?,?,?,0,?,?,?, ?,?,0)
+        ");
+        $ending_date = NULL; // Can be updated by admin later in completed.php
+        $stmt->bind_param(
+            "ssssssssss",
+            $customer['name'],
+            $customer['email'],
+            $customer['phone_num'],
+            $customer['phone_num2'],
+            $customer['address'],
+            $customer['start_date'],
+            $ending_date,
+            $customer['place'],
+            $customer['service'],
+            $customer['message']
+        );
+        $stmt->execute();
+
+        // Delete from Customer table after moving
+        $stmt = $conn->prepare("DELETE FROM Customer WHERE email=?");
+        $stmt->bind_param("s", $_GET['email']);
+        $stmt->execute();
+    }
+    header("Location: completed.php");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
