@@ -36,5 +36,12 @@
         </div>
     </nav>
 
+    <div class="dashboard">
+        <div class="card"><h3>Total Customers</h3><div class="count"><?= $total_customer ?></div></div>
+        <div class="card"><h3>Selected</h3><div class="count"><?= $selected_customer ?></div></div>
+        <div class="card"><h3>Not Selected</h3><div class="count"><?= $not_selected_customer ?></div></div>
+        <div class="card"><h3>Completed</h3><div class="count"><?= $completed_project ?></div></div>
+    </div>
+
 </body>
 </html>
