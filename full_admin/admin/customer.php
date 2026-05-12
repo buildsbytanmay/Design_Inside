@@ -126,6 +126,24 @@ if (isset($_GET['edit'], $_GET['email'])) {
     $edit_data = $stmt->get_result()->fetch_assoc();
 }
 
+/* ---------- FETCH WITH FILTER ---------- */
+$filter_sql = "SELECT * FROM Customer WHERE 1=1";
+$params = []; $types = '';
+$filter_fields = ['name','email','service','status_c','place','price_range'];
+foreach($filter_fields as $f){
+    if(!empty($_GET[$f])){
+        if($f == 'price_range'){
+            if($_GET[$f] == '100000') $filter_sql .= " AND price_range <= 100000";
+            elseif($_GET[$f] == '500000') $filter_sql .= " AND price_range <= 500000";
+            elseif($_GET[$f] == '500001') $filter_sql .= " AND price_range > 500000";
+        } else {
+            $filter_sql .= " AND $f LIKE ?";
+            $params[] = "%".$_GET[$f]."%";
+            $types .= 's';
+        }
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
