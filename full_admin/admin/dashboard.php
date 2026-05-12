@@ -100,6 +100,30 @@ nav a:hover{
     }
 }
 
+/* CARDS */
+.dashboard{
+    width:95%;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px
+}
+.card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1)
+}
+.card h3{
+    color:#666;
+    margin-bottom:10px
+}
+.card .count{
+    font-size:32px;
+    font-weight:800;
+    color:#004d4d
+}
+
 
 </style>
 </head>
