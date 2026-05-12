@@ -5,6 +5,11 @@ if (!isset($_SESSION['admin'])) {
     exit;
 }
 
+/* ---------- DB Connection ---------- */
+$conn = new mysqli("localhost", "root", "", "Design_inside");
+if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
+
+
 ?>
 
 <!DOCTYPE html>
