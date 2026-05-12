@@ -43,5 +43,24 @@
         <div class="card"><h3>Completed</h3><div class="count"><?= $completed_project ?></div></div>
     </div>
 
+    <form class="filter-form" method="get">
+        <select name="status">
+            <option value="">All Status</option>
+            <option value="selected">Selected</option>
+            <option value="not selected">Not Selected</option>
+        </select>
+        <input type="text" name="name" placeholder="Name">
+        <input type="text" name="email" placeholder="Email">
+        <input type="text" name="phone" placeholder="Phone">
+        <input type="text" name="service" placeholder="Service">
+        <select name="price">
+            <option value="">All Price</option>
+            <option value="100000">Under 100000</option>
+            <option value="500000">Under 500000</option>
+            <option value="500001">Above 500000</option>
+        </select>
+        <button type="submit">Filter</button>
+    </form>
+
 </body>
 </html>
