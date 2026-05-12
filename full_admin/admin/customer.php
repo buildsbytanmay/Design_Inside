@@ -114,10 +114,17 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         }
     }
     header("Location: customer.php");
-    exit;
-    
+    exit;   
 }
 
+/* ---------- FETCH FOR EDIT ---------- */
+$edit_data = null;
+if (isset($_GET['edit'], $_GET['email'])) {
+    $stmt = $conn->prepare("SELECT * FROM Customer WHERE email=?");
+    $stmt->bind_param("s", $_GET['email']);
+    $stmt->execute();
+    $edit_data = $stmt->get_result()->fetch_assoc();
+}
 
 ?>
 
