@@ -9,6 +9,14 @@ if (!isset($_SESSION['admin'])) {
 $conn = new mysqli("localhost", "root", "", "Design_inside");
 if ($conn->connect_error) die("Connection failed: " . $conn->connect_error);
 
+/* ---------- DELETE ---------- */
+if (isset($_GET['delete'], $_GET['email'])) {
+    $stmt = $conn->prepare("DELETE FROM Customer WHERE email=?");
+    $stmt->bind_param("s", $_GET['email']);
+    $stmt->execute();
+    header("Location: customer.php");
+    exit;
+}
 
 ?>
 
