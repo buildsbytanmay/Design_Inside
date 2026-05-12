@@ -77,6 +77,44 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         exit;
     }
 
+    if (!empty($phone_num2) && !preg_match('/^[6-9][0-9]{9}$/', $phone_num2)) {
+        echo "<script>alert('Second phone number must be 10 digits and start with 6-9');history.back();</script>";
+        exit;
+    }
+
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Invalid email format');history.back();</script>";
+        exit;
+    }
+
+    /* ---------- UPDATE ---------- */
+    if (isset($_POST['action']) && $_POST['action'] === 'update') {
+        $stmt = $conn->prepare("UPDATE Customer SET name=?, email=?, phone_num=?, phone_num2=?, address=?, price_range=?, start_date=?, place=?, service=?, message=?, status_c=? WHERE email=?");
+        $stmt->bind_param(
+            "ssssssssssss",
+            $name, $email, $phone_num, $phone_num2, $address, $price_range, $start_date, $place, $service, $message, $status_c, $_POST['old_email']
+        );
+        $stmt->execute();
+    } 
+    /* ---------- INSERT ---------- */
+    else {
+        $stmt = $conn->prepare("INSERT INTO Customer (name,email,phone_num,phone_num2,address,price_range,start_date,place,service,message,status_c) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param(
+            "sssssssssss",
+            $name, $email, $phone_num, $phone_num2, $address, $price_range, $start_date, $place, $service, $message, $status_c
+        );
+
+        try {
+            $stmt->execute();
+        } catch (mysqli_sql_exception $e) {
+            if ($e->getCode() == 1062) {
+                echo "<script>alert('This email already exists!');history.back();</script>";
+                exit;
+            } else throw $e;
+        }
+    }
+    header("Location: customer.php");
+    exit;
     
 }
 
