@@ -144,6 +144,43 @@ nav a:hover{
     cursor:pointer;
 }
 
+/* TABLE */
+.table-container{
+    width:95%;
+    margin:20px auto;
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    overflow-x:auto;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th,td{
+    padding:8px;
+    border:1px solid #ddd;
+    font-size:13px;
+}
+th{
+    background:#004d4d;
+    color:#fff
+}
+.approve{
+    background:#28a745;
+    color:#fff;
+    border:none;
+    padding:5px 8px;
+    border-radius:5px;
+}
+.reject{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:5px 8px;
+    border-radius:5px;
+}
 
 </style>
 </head>
