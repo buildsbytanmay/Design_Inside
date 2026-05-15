@@ -124,6 +124,26 @@ nav a:hover{
     color:#004d4d
 }
 
+/* FILTER */
+.filter-form{
+    width:95%;
+    margin:20px auto;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.filter-form input,.filter-form select,.filter-form button{
+    padding:8px 12px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+.filter-form button{
+    background:#004d4d;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+}
+
 
 </style>
 </head>
