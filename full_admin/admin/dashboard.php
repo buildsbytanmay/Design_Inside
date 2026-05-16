@@ -37,6 +37,13 @@ $selected_customer = $conn->query("SELECT COUNT(*) c FROM Customer WHERE status_
 $not_selected_customer = $conn->query("SELECT COUNT(*) c FROM Customer WHERE status_c='not selected'")->fetch_assoc()['c'];
 $completed_project = $conn->query("SELECT COUNT(*) c FROM Compro")->fetch_assoc()['c'];
 
+/* ---------- FILTER VALUES ---------- */
+$status  = $_GET['status']  ?? '';
+$name    = $_GET['name']    ?? '';
+$email   = $_GET['email']   ?? '';
+$phone   = $_GET['phone']   ?? '';
+$service = $_GET['service'] ?? '';
+$price   = $_GET['price']   ?? '';
 
 ?>
 
