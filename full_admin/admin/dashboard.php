@@ -31,6 +31,13 @@ if (isset($_GET['action'], $_GET['email'])) {
     exit;
 }
 
+/* ---------- DASHBOARD COUNTS ---------- */
+$total_customer = $conn->query("SELECT COUNT(*) c FROM Customer")->fetch_assoc()['c'];
+$selected_customer = $conn->query("SELECT COUNT(*) c FROM Customer WHERE status_c='selected'")->fetch_assoc()['c'];
+$not_selected_customer = $conn->query("SELECT COUNT(*) c FROM Customer WHERE status_c='not selected'")->fetch_assoc()['c'];
+$completed_project = $conn->query("SELECT COUNT(*) c FROM Compro")->fetch_assoc()['c'];
+
+
 ?>
 
 <!DOCTYPE html>
