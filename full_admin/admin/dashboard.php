@@ -11,6 +11,26 @@ if ($conn->connect_error) {
     die("Database connection failed. Start MySQL in XAMPP.");
 }
 
+/* ---------- APPROVE / REJECT ---------- */
+if (isset($_GET['action'], $_GET['email'])) {
+    $email = $_GET['email'];
+
+    if ($_GET['action'] === 'approve') {
+        $stmt = $conn->prepare("UPDATE Customer SET status_c='selected' WHERE email=?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+    }
+
+    if ($_GET['action'] === 'reject') {
+        $stmt = $conn->prepare("DELETE FROM Customer WHERE email=?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+    }
+
+    header("Location: dashboard.php");
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
