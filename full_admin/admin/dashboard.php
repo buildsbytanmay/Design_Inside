@@ -45,6 +45,51 @@ $phone   = $_GET['phone']   ?? '';
 $service = $_GET['service'] ?? '';
 $price   = $_GET['price']   ?? '';
 
+/* ---------- FILTER QUERY ---------- */
+$sql = "SELECT * FROM Customer WHERE 1";
+$params = [];
+$types = "";
+
+if ($status !== '') {
+    $sql .= " AND status_c=?";
+    $params[] = $status;
+    $types .= "s";
+}
+if ($name !== '') {
+    $sql .= " AND name LIKE ?";
+    $params[] = "%$name%";
+    $types .= "s";
+}
+if ($email !== '') {
+    $sql .= " AND email LIKE ?";
+    $params[] = "%$email%";
+    $types .= "s";
+}
+if ($phone !== '') {
+    $sql .= " AND phone_num LIKE ?";
+    $params[] = "%$phone%";
+    $types .= "s";
+}
+if ($service !== '') {
+    $sql .= " AND service LIKE ?";
+    $params[] = "%$service%";
+    $types .= "s";
+}
+if ($price !== '') {
+    if ($price === '100000') $sql .= " AND price_range <= 100000";
+    if ($price === '500000') $sql .= " AND price_range <= 500000";
+    if ($price === '500001') $sql .= " AND price_range > 500000";
+}
+
+$sql .= " ORDER BY created_at DESC";
+
+$stmt = $conn->prepare($sql);
+if ($params) {
+    $stmt->bind_param($types, ...$params);
+}
+$stmt->execute();
+$result = $stmt->get_result();
+
 ?>
 
 <!DOCTYPE html>
