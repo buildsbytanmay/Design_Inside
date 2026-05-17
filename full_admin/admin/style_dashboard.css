@@ -50,3 +50,25 @@ nav a:hover {
     align-items: center;
     gap: 15px;
 }
+
+.filter-form select,
+.filter-form input[type="date"],
+.filter-form button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+}
+
+.filter-form button {
+    background-color: #004d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-form button:hover {
+    background-color: #006666;
+}
