@@ -72,3 +72,14 @@ nav a:hover {
 .filter-form button:hover {
     background-color: #006666;
 }
+
+/* ---------- Table ---------- */
+.table-container {
+    width: 95%;
+    margin: 20px auto;
+    overflow-x: hidden; /* Remove horizontal scroll */
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+}
