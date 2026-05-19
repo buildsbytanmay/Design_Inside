@@ -83,3 +83,9 @@ nav a:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     padding: 20px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Important for responsive column widths */
+}
