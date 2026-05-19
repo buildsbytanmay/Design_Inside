@@ -120,3 +120,21 @@ button.reject {
     font-weight: 600;
     transition: 0.3s;
 }
+
+button.approve {
+    background-color: #28a745;
+    color: white;
+}
+
+button.approve:hover {
+    background-color: #218838;
+}
+
+button.reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.reject:hover {
+    background-color: #c82333;
+}
