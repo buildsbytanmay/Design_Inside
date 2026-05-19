@@ -109,3 +109,14 @@ table th {
 table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+/* ---------- Buttons ---------- */
+button.approve,
+button.reject {
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
