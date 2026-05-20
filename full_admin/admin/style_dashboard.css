@@ -138,3 +138,11 @@ button.reject {
 button.reject:hover {
     background-color: #c82333;
 }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
