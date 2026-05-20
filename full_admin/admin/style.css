@@ -14,3 +14,12 @@ nav{
     justify-content: space-between;
     align-items: center;
 }
+
+.logo{
+    height: 80px;
+    width: 150px;
+    background-image: url(/Assets/Images/Logo.png);
+    background-size: 115%;
+    background-position-x: center;
+    background-position-y: 45%;
+}
