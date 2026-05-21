@@ -32,3 +32,8 @@ nav{
     align-items: center;
     gap: 20px;
 }
+
+.submenus{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
