@@ -60,3 +60,8 @@ nav{
     border-radius: 10px;
     cursor: pointer;
 }
+
+.butt:hover{
+    color: black;
+    background-color: white;
+}
