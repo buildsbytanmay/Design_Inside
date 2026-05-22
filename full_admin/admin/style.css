@@ -71,3 +71,9 @@ nav{
     padding-bottom: 5px;
     transform: rotate(45deg);
 }
+
+.butt:hover svg{
+    padding-bottom: 0px;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
