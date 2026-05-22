@@ -6,3 +6,11 @@ This project showcases modern home and office interior layouts with a clean UI a
 
 ---
 
+## 🚀 Features
+- Modern and responsive UI  
+- Interior design gallery with multiple design sections  
+- Smooth animations and transitions  
+- Clean and organized code structure  
+- Beginner-friendly HTML, CSS, and JavaScript implementation  
+
+---
