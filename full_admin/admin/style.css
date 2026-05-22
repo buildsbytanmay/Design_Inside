@@ -65,3 +65,9 @@ nav{
     color: black;
     background-color: white;
 }
+
+.butt svg{
+    padding-left: 5px;
+    padding-bottom: 5px;
+    transform: rotate(45deg);
+}
