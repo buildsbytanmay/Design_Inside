@@ -26,3 +26,15 @@ Design Inside is a full-stack interior design business website built with HTML, 
 - **Server** — Apache (XAMPP)
 
 ---
+
+## ✨ Features
+
+- Hero section with background video autoplay
+- Animated image gallery with prev/next slider
+- Services section — Kitchen Remodeling, Bathroom Remodeling, Home Additions
+- Stats counter — Current Projects, Homes Renovated, Valued Partners
+- Quotation / lead capture form
+- Responsive navigation with hamburger menu
+- Admin panel with login, dashboard, customer management, and completed projects
+
+---
