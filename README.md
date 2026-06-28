@@ -17,3 +17,12 @@ Design Inside is a full-stack interior design business website built with HTML, 
 | Get a Quote | `quotation_form.php` |
 
 ---
+
+## 🛠️ Tech Stack
+
+- **Frontend** — HTML5, CSS3, Vanilla JavaScript
+- **Backend** — PHP
+- **Database** — MySQL (via XAMPP)
+- **Server** — Apache (XAMPP)
+
+---
