@@ -79,5 +79,26 @@ Three tables are used:
    ```
    http://localhost/Design_inside/full_admin/
    ```
-   
+
+---
+
+## 📁 Project Structure
+
+```
+Design_inside/
+├── Assets/
+│   ├── Images/          # Gallery & UI images
+│   └── Videos/          # Hero background video
+├── full_admin/          # Admin panel (PHP)
+│   ├── admin/           # Dashboard, customers, completed projects
+│   └── database.txt     # SQL schema & seed data
+├── index.html           # Home page
+├── service.html         # Services page
+├── project.html         # Projects / gallery page
+├── about_us.html        # About Us page
+├── quotation_form.php   # Client inquiry form
+├── script.js            # Shared JS (gallery slider, hamburger menu)
+└── *.css                # Page-specific stylesheets
+```
+
 ---
