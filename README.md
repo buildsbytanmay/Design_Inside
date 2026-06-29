@@ -38,3 +38,15 @@ Design Inside is a full-stack interior design business website built with HTML, 
 - Admin panel with login, dashboard, customer management, and completed projects
 
 ---
+
+## 🗄️ Database Schema
+
+Three tables are used:
+
+- **Admins** — Admin login credentials with security Q&A
+- **Customer** — Quotation requests submitted by clients
+- **Compro** — Completed projects with profit tracking
+
+> SQL setup script located at `full_admin/database.txt`
+
+---
