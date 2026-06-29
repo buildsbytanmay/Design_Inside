@@ -50,3 +50,8 @@ Three tables are used:
 > SQL setup script located at `full_admin/database.txt`
 
 ---
+
+## ⚙️ Setup & Installation
+
+### Prerequisites
+- [XAMPP](https://www.apachefriends.org/) (Apache + MySQL + PHP)
