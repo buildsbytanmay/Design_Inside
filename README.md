@@ -55,3 +55,29 @@ Three tables are used:
 
 ### Prerequisites
 - [XAMPP](https://www.apachefriends.org/) (Apache + MySQL + PHP)
+
+### Steps
+
+1. Clone or copy the project folder into your XAMPP `htdocs` directory:
+   ```
+   C:\xampp\htdocs\Design_inside\
+   ```
+
+2. Start **Apache** and **MySQL** from the XAMPP Control Panel.
+
+3. Open [phpMyAdmin](http://localhost/phpmyadmin) and run the SQL from:
+   ```
+   full_admin/database.txt
+   ```
+
+4. Open the site in your browser:
+   ```
+   http://localhost/Design_inside/
+   ```
+
+5. Access the admin panel at:
+   ```
+   http://localhost/Design_inside/full_admin/
+   ```
+   
+---
