@@ -102,3 +102,9 @@ Design_inside/
 ```
 
 ---
+
+## 👥 Developers
+
+Developed by **Tanmay Bhogekar** & **Kabir Bundele** — MCA First Year Mini Project, 2025.
+
+---
